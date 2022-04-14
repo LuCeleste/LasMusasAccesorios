@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@100;300;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Musas Accesorios &#x2728; </title>
+    <link rel="icon" href="fotos/favicon-32x32.png">
+    <link rel="stylesheet" href="style/estilo.css">
+</head>
+
+<body>
+    <!--header con logo, menu, carrito y login-->
+    <!--el menú tiene vinculos dentro del index y a otros html-->
+<header>
+    <section class="logo"> 
+    <a href="index.html"> <img class="logo" id="inicio" src="fotos/las musas, marca-01.png" width=250px alt="logo"> </a>
+    </section>
+<nav>
+    <ul class="menu">
+	<li><a href="index.html#nosotros">Nosotros</a>
+    </li>
+    <li><a href="index.html#productos">Productos</a> 
+        <ul>
+        <li><a href="pages/todos.html">Todos los productos</a></li>
+        <li><a href="pages/arosarcilla.html">Aros de arcilla polimérica</a></li>
+        <li><a href="pages/acero.html">Acero dorado</a></li>
+        <li><a href="pages/anillos.html">Anillos porcelana</a></li>
+        <li><a href="pages/velas.html">Velas</a></li>
+        </ul>
+    </li>
+    <li><a href="">Informacion</a>
+        <ul>
+        <li><a href="pages/preguntas.html">Preguntas frecuentes</a></li>
+        <li><a href="pages/cuidados.html">Como cuidar tus accesorios</a></li>
+        <li><a href="pages/talles.html">Talles de anillos</a></li>
+        </ul>
+    </li>
+	<li><a href="index.html#contacto">Contacto</a>
+    </li>
+	</ul>
+</nav>
+	<section class="loginYCart">
+        <a href="pages/login.html"> <img id="iniciarsesion" src="fotos/iniciarsesion.png" width=50px alt="iniciarsesion"> </a>
+        <a href=""> <img id="shoppingbag" src="fotos/bag.png" width=50px alt="carrito"> </a> 
+    </section>
+</header>
+
+<main class="grid">
+
+    <section class="slide" id="slide"> <!--slide de fotos que todavía no se como hacer-->
+        <img class="slide" id="slide" src="fotos/arosadslide.jpg" width=750px alt="imagen aros acero dorado">
+    </section>
+
+    <section id="nosotros" class="nosotros"><!--seccion de nosotros-->
+     <h2> Nosotros</h2>
+        <section class="nosTexto">    
+            <p> Creado con mucho amor desde Mar del Plata, Buenos Aires, Las Musas busca llevar articulos especiales de diseño a las manos de todxs. Ofrecemos piezas unicas hechas a mano, listas para ser combinadas con las joyas de acero bañado en oro. Si no son de usar accesorios, esperamos llegar a sus corazones con las velitas 100% naturales que tanto amamos. &#x1F496; </p>
+        </section>
+        <img class="nosImagen  id="nosotros" src="fotos/arcillarainbow.jpg" alt="imagen aros arcilla"> 
+    </section>
+
+
+
+<!--seccion de productos del index, se podrá ingresar a cada categoria desde el menú también-->
+<section class="pro" id="productos" >
+    <section class="productosTitulo">
+    <h2> Productos </h2>
+    </section>
+    <section class="productos"> 
+        <section class="productosAros">
+            <a href="pages/arosarcilla.html"><img id="arcilla" src="fotos/arcillat.jpg" alt="imagen aros arcilla"> </a>
+            <a href="pages/arosarcilla.html"> Aros de Arcilla </a>
+        </section>
+        <section class="productosAnillos">
+            <a href="pages/anillos.html"><img id="porcelana" src="fotos/anillomano.jpg"  alt="imagen anillos"> </a>
+            <a href="pages/anillos.html"> Anillos de porcelana </a>
+        </section>
+        <section class="productosVelas">
+            <a href="pages/velas.html" ><img id="velas" src="fotos/vela.jpg"  alt="imagen vela"> </a>
+            <a href="pages/velas.html">  Velas </a>
+        </section> 
+    </section> 
+    <section class="ProductosBotonTodos"> 
+    <h4> <a href="pages/todos.html"> Todos los productos </a> </h4>
+    </section>
+</section>
+
+
+
+
+
+
+
+ <!--seccion contactos,con info y formulario-->
+<section id="contacto" class="conta "> 
+    <section class="contactoTitulo">
+        <h2 > Contacto </h2> <br>
+    </section>
+    <section class="contacto ">
+        <section class="contactoTexto">
+        <h3>¿Como nos contactan?</h3>
+        <p> La forma más rápida es mandarnos un mensaje directo de Instagram, o por mail a lasmusas2021@gmail.com. Respondemos lo más rápido posible.</p>
+        <ul>
+        <li> <img id="mail" src="fotos/mail.png"  alt="icono mail"> lasmusas2021@gmail.com</li>
+        <li> <img id="instagram" src="fotos/ig.png"  alt="icono instagram"> @lasmusasaccesorios</li>
+        <li> <img id="wpp" src="fotos/wpp.png"  alt="icono Whatsapp"> 223123456789</li>
+        </ul>
+        </section>
+        <section class="contactoFormulario"> 
+        <form action="">
+            <div>
+            <label for="nombre"></label>
+            <input class="contactoFormularioPartes" type="text" placeholder="Nombre" name="nombre">
+            <label for="apellido"> </label>
+            <input class="contactoFormularioPartes" type="text" placeholder="Apellido" name="apellido">
+            </div>
+            <div>
+            <label for="asunto"> </label>
+            <input class="contactoFormularioPartes" type="text" placeholder="Asunto" name="asunto">
+            <label for="email"></label>
+            <input class="contactoFormularioPartes" type="email" placeholder="Mail* " name="email" required>
+            </div>
+            <div>
+            <label for="comentario"></label>
+            <textarea name="comentario" id="" cols="50" rows="20" placeholder="Escribinos tu mensaje! "></textarea>
+            </div>
+            <input class="botonEnviar" type="submit" value="Enviar">
+        </form>
+        </section>  
+    </section>
+</section>
+</main>
+<hr> 
+
+
+
+
+<!--seccion footer, con formulario, vinculos a otros htmls y lista-->
+<footer > 
+    <section class="news">
+    <h4> Newsletter </h4> 
+    Suscribite para recibir todas las novedades! &#x1F496; 
+    <div>
+        <form>
+        <label class="newsletterform_margen" for="nombre"></label>
+        <input class="newsletterForm" type="text" placeholder="Nombre" name="nombre">
+        <label for="email"></label>
+        <input class="newsletterFormDos" type="email" placeholder="Mail* " name="email" required>
+        <input class="enviar" type="submit" value="Enviar">
+        </form>
+    </div>
+    </section >
+    <section class="masInfo" >
+        <h4> Mas información </h4> 
+        <ul>
+        <li><a href="pages/preguntas.html">Preguntas frecuentes</a></li>
+        <li><a href="pages/cuidados.html">Como cuidar tus accesorios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </section>
+    <section class="datos">
+        <h4> Datos de contacto </h4> 
+        <ul>
+        <li> <img id="mail" src="fotos/mail.png"  alt="icono mail"> lasmusas2021@gmail.com</li>
+        <li> <img id="instagram" src="fotos/ig.png"  alt="icono instagram"> @lasmusasaccesorios</li>
+        <li> <img id="wpp" src="fotos/wpp.png"  alt="icono Whatsapp"> 223123456789</li>
+        </ul>
+    </section>
+    </footer>
+
+</body>
+
+</html>
+
