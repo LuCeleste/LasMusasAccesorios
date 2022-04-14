@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Las Musas Accesorios &#x2728; </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" href="fotos/favicon-32x32.png">
     <link rel="stylesheet" href="style/estilo.css">
 </head>
@@ -53,7 +54,7 @@
         <img class="slide" id="slide" src="fotos/arosadslide.jpg" width=750px alt="imagen aros acero dorado">
     </section>
 
-    <section id="nosotros" class="nosotros"><!--seccion de nosotros-->
+    <section id="nosotros" class="nosotros wow animate__animated animate__fadeInUp" data-wow-delay="1.5s"><!--seccion de nosotros-->
      <h2> Nosotros</h2>
         <section class="nosTexto">    
             <p> Creado con mucho amor desde Mar del Plata, Buenos Aires, Las Musas busca llevar articulos especiales de diseño a las manos de todxs. Ofrecemos piezas unicas hechas a mano, listas para ser combinadas con las joyas de acero bañado en oro. Si no son de usar accesorios, esperamos llegar a sus corazones con las velitas 100% naturales que tanto amamos. &#x1F496; </p>
@@ -64,7 +65,7 @@
 
 
 <!--seccion de productos del index, se podrá ingresar a cada categoria desde el menú también-->
-<section class="pro" id="productos" >
+<section class="pro wow animate__animated animate__fadeInUp" data-wow-delay="1.5s" id="productos" >
     <section class="productosTitulo">
     <h2> Productos </h2>
     </section>
@@ -94,7 +95,7 @@
 
 
  <!--seccion contactos,con info y formulario-->
-<section id="contacto" class="conta "> 
+<section id="contacto wow animate__animated animate__fadeInUp" data-wow-delay="1.5s" class="conta "> 
     <section class="contactoTitulo">
         <h2 > Contacto </h2> <br>
     </section>
@@ -170,6 +171,10 @@
     </section>
     </footer>
 
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 </body>
 
 </html>
