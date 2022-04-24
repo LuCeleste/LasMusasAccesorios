@@ -1,0 +1,394 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: $font-titulos;
+}
+        
+h2{
+    font-size: 2.5rem;
+    font-family: $font-titulos;
+}
+h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h4{
+    font-size: 1.3rem ;
+}
+
+header{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "nav nav nav";
+    background-color: $verde;
+    height: 80px;  
+    z-index: 3; 
+}
+nav{
+    grid-area: nav;
+    z-index: 3;
+}
+
+footer{ 
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    margin: 30px;
+    background-color: $beige;
+    grid-template-areas: "news news" 
+                        "masInfo datos";
+}
+
+.newsletterForm{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-width: 0.5;
+    width: 150px;
+}
+        
+.newsletterFormDos{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 150px;
+}
+
+
+.grid {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-areas:"slide"
+                        "nos"
+                        "nos"
+                        "pro"
+                        "pro"
+                        "pro"
+                        "conta"
+                        "conta";
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-self: center;
+}
+.slide {
+    margin-top: 50px;
+    justify-self: center;
+    width: 500px;
+    height: 350px;
+    img{
+        object-fit:cover;
+        width: 500px;
+        height: 350px;
+    }
+}
+
+
+
+.nosImagen {
+    width: 200px;
+    height: 300px;
+    object-fit:cover;
+    grid-area: nosimg;
+}
+.nosTexto{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    width: auto;
+    grid-area: nostext;
+}
+.nosotros {
+    grid-area: nos;
+    margin-top: 80px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto ;
+    grid-template-areas:"nostext titulon"
+                        "nostext nosimg";
+    border-radius: 100px;
+    align-items: center;
+    h2{
+        grid-area: titulon;
+        display: flex ;
+        justify-content: center;
+    }
+    
+}
+
+
+
+.productosAnillos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: ani;
+    text-align: center;
+}
+.productosAros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: aro;
+}
+.productosVelas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: vel;
+}
+.productos{
+    display: grid;
+    grid-template-areas: "aro ani vel";
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto;
+    img{
+        width: 180px;
+        height: 250px;
+    }
+}
+
+
+.contactoTitulo{
+    display: flex;
+    justify-content: center;
+}
+.contacto{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contactoTexto{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    ul{
+        list-style: none;
+        margin-top: 10px;
+        img{
+            width: 20px;
+        }
+    }
+}
+
+.contactoFormulario textarea{
+    height: 150px;
+    width: 200px;
+    resize: none;
+}
+.contactoFormularioPartes{
+    width: 100px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+.botonEnviar{
+    color: $beige ;
+    background-color: $rosa; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: $rosa;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor:pointer;
+    &:hover{
+        color: $verde ;
+        background-color: $beige; 
+        border-style: solid;
+        border-width: 2px;
+        border-color: $rosa;
+        border-radius: 1rem;
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+        
+}
+
+
+
+
+
+
+
+
+.talles {
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    grid-template-areas:"titulo titulo"
+                        "tallesTexto tallesTexto"
+                        "tallesImagen tallesTabla" ;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto auto ;
+    justify-items: center;
+    img{
+        width: 250px;
+        height: 350px;
+        object-fit:cover;
+        grid-area: tallesImagen;
+        padding-top: 0px;
+        padding-right: 10px;
+    }
+    p{
+        font-size: 1.2rem;
+        padding: 10px;
+        grid-area: tallesTexto;
+        width: 500px;
+    }
+    h1{
+        grid-area: titulo;
+        text-align: center;
+    }
+    
+}
+
+
+.tallesTabla{
+    width: 250px;
+    height: 350px;
+    border-color: $rosa ;
+    border-width: 5px ;
+    border-style: solid;
+    border-radius: 1rem;
+    grid-area: tallesTabla;
+}
+  
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    height: 100%;
+}
+
+
+
+.preguntas{
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-areas:"titulop titulop "
+                        "pregtexto pregtexto"
+                        "pregimagen pregimagen";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    h1{    
+        grid-area: titulop;
+    }
+    img{    
+        width: 350px;
+        height: 400px;
+        padding: 0px;
+        justify-content: center;
+    }
+}
+
+.preguntasTexto{   
+    grid-area: pregtexto;
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 10px;
+    p{
+        padding-bottom: 10px;
+        padding-left: 30px;
+    }
+    h5{
+        font-weight: bold;
+        font-style: normal;
+        font-size: 25px;
+    }
+}
+
+.preguntasImagen{
+    grid-area: pregimagen;
+}
+
+
+
+
+.cuidadosYMateriales {
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto auto ;
+    justify-items: center;
+    grid-template-areas:"tituloc tituloc"
+                        "imgcu textu "
+                        "textd imgcd";
+    h1{
+    grid-area: tituloc;
+    text-align: center;
+    }
+    img{
+        width: 250px;
+        height: 300px;
+        object-fit:cover;
+        padding: 5px;
+    }
+    h3{
+        padding-bottom: 10px;
+    }
+}
+
+.imagenMateriales{
+    grid-area: imgcu;
+}
+.textoMateriales{
+    grid-area: textu;
+    p {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        padding-bottom: 2px;
+        font-style: italic;
+    }
+}
+.imagenCuidados{
+    grid-area: imgcd;
+}
+.textoCuidados{
+    grid-area: textd;
+    text-align: right;
+    p {
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+        padding-bottom: 2px;
+    }
+    
+}
+    
+
+.unProducto img{
+    width: 250px;
+    height: 300px;
+    object-fit:cover;
+    border-radius: 1rem;
+    box-shadow: $boxshadow;
+    opacity: 70%;
+}

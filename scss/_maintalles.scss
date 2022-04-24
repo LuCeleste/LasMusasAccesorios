@@ -1,0 +1,60 @@
+
+.talles {
+    padding-top: 110px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: grid;
+    grid-template-areas: "titulo"
+                        "tallesTexto"
+                        "tallesTabla"
+                        "tallesImagen";
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto auto ;
+    justify-items: center;
+    h1{
+        grid-area: titulo;
+        text-align: center;
+    }
+    img{
+        object-fit:cover;
+        grid-area: tallesImagen;
+        height: 300px;
+        width: 250px;
+        padding-top: 10px;
+    }
+    p{
+        width: 300px;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 10px;
+        grid-area: tallesTexto;
+    }
+    
+    
+}
+
+
+.tallesTabla{
+    width: 300px;
+    height: 350px;
+    border-color: $rosa ;
+    border-width: 5px ;
+    border-style: solid;
+    border-radius: 1rem;
+    grid-area: tallesTabla;
+    padding-bottom: 0px;
+    table {
+        caption-side: bottom;
+        border-collapse: collapse;
+        height: 100%;
+        text-align: center;
+        tr th{
+            text-transform: uppercase;
+            background-color: $rosa ;
+        }
+        tr:nth-child(odd) td {
+            background-color: $rosita ;
+        }
+    }
+}

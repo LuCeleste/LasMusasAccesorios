@@ -1,0 +1,59 @@
+
+.cuidadosYMateriales {
+    padding-top: 110px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto auto auto auto;
+    justify-items: center;
+    grid-template-areas: "tituloc"
+                        "textu"
+                        "imgcu"
+                        "textd"
+                        "imgcd";
+h1{
+    grid-area: tituloc;
+    text-align: center;
+}
+img{
+    width: 300px;
+    height: 250px;
+    object-fit:cover;
+    padding: 5px;
+}
+h3{
+    padding-bottom: 10px;
+}
+  }
+
+
+.imagenMateriales{
+    grid-area: imgcu;
+}
+.textoMateriales{
+    grid-area: textu;
+    p {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        padding-bottom: 10px;
+        font-style: italic;
+    }
+}
+.imagenCuidados{
+    grid-area: imgcd;
+}
+.textoCuidados{
+    grid-area: textd;
+    text-align: right;
+    p {
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+    }
+

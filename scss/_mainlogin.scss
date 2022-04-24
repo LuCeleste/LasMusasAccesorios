@@ -1,0 +1,40 @@
+
+.todoLogin {
+    padding-top: 110px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulol titulol titulol"
+                        ". login .";
+    justify-items: center;
+    h1{
+        grid-area: titulol;
+    }
+    div{
+        padding:7px;
+    }
+    img{
+        width: 260px;
+        object-fit:cover;
+    
+    }
+}
+
+
+.login{
+    grid-area: login;
+    justify-items: center;
+    align-items: center;
+}
+
+.formLogin{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 16rem;
+}
+.loginEnItalic{
+    font-style: italic;
+}

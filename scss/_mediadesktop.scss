@@ -1,0 +1,426 @@
+header{ 
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "nav nav nav";
+    background-color: $verde;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    z-index: 3;
+}
+nav{
+    grid-area: nav;
+    z-index: 3;
+}
+footer{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 30px;
+    background-color: $beige;
+    grid-template-areas: "news masInfo datos";
+}
+
+.news{
+    grid-area: news;
+    justify-self: center;
+}
+.masInfo{
+    grid-area: masInfo;
+    justify-self: center;
+}
+.datos{
+    grid-area: datos;
+    justify-self: center;
+}
+
+.newsletterForm{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-width: 0.5;
+    width: 150px;
+}
+        
+.newsletterFormDos{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 150px;
+}
+.enviar{
+    color: $beige ;
+    background-color: $rosa; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: $rosa;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor:pointer;
+    &:hover{
+        color: $verde ;
+        background-color: $beige; 
+        border-style: solid;
+        border-width: 2px;
+        border-color: $rosa;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+    
+}
+        
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: $font-titulos;
+}
+        
+h2{
+    font-size: 3rem;
+    font-family: $font-titulos;
+}
+h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h4{
+    font-size: 1.5rem ;
+}
+.grid {
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-areas:". slide ."
+                        "nos nos nos"
+                        "pro pro pro"
+                        "conta conta conta";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+}
+.slide {
+    grid-area: slide;
+    margin-top: 20px;
+    justify-self: center;
+    padding-bottom: 20px;
+    width: 1000px;
+    height: 700px;
+    img{
+        object-fit:cover;
+        width: 1000px;
+        height: 700px;
+    }
+}
+
+.carousel-indicators {
+    margin-bottom: 1rem;
+
+}
+
+.nosImagen {
+    width: 400px;
+    height: 300px;
+    object-fit:cover;
+    grid-area: nosimg;
+}
+.nosTexto{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    width: auto;
+    grid-area: nostext;
+}
+.nosotros {
+    grid-area: nos;
+    margin-top: 80px;
+    padding: 110px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulon titulon nosimg"
+                         "nostext nostext nosimg";
+    border-radius: 100px;
+    h2{
+        grid-area: titulon;
+        display: flex ;
+        justify-content: center;
+    
+    }
+    
+}
+
+.pro{
+    grid-area: pro;
+    padding-top: 90px;
+}
+
+.productosAnillos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    grid-area: ani;
+}
+.productosAros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    grid-area: aro;
+}
+.productosVelas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    grid-area: vel;
+}
+.productos{
+    display: grid;
+    grid-template-areas: "aro ani vel";
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    img{
+        width: 300px;
+        height: 350px;
+    }
+}
+
+
+
+.conta{
+    grid-area: conta;
+    padding-top: 90px;
+}
+.contactoTitulo{
+    display: flex;
+    justify-content: center;
+}
+.contacto{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.contactoTexto{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    ul{
+        list-style: none;
+        margin-top: 10px;
+        img{
+            width: 25px;
+        }
+    }
+}
+
+.contactoFormulario textarea{
+    height: 200px;
+    width: 400px;
+    resize: none;
+}
+.contactoFormularioPartes{
+    width: 198px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+.botonEnviar{
+    color: $beige ;
+    background-color: $rosa; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: $rosa;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor:pointer;
+    &:hover{
+        color: $verde ;
+        background-color: $beige; 
+        border-style: solid;
+        border-width: 2px;
+        border-color: $rosa;
+        border-radius: 1rem;
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+}
+
+
+.talles {
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-areas:". titulo ."
+                        "tallesImagen tallesTexto tallesTabla";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto ;
+    justify-items: center;
+    p{
+        width: 350px;
+        text-align: center;
+        font-size: 1.5rem;
+        grid-area: tallesTexto;
+    }
+    h1{
+        grid-area: titulo;
+    
+    }
+}
+    
+.tallesImagen{
+    grid-area: tallesImagen;
+    img{
+        width: 300px;
+        height: 420px;
+        object-fit:cover;
+    }
+}
+
+.tallesTabla{
+    width: 300px;
+    height: 400px;
+    border-color: $rosa ;
+    border-width: 5px ;
+    border-style: solid;
+    border-radius: 1rem;
+    grid-area: tallesTabla;
+    table {
+        caption-side: bottom;
+        border-collapse: collapse;
+        height: 100%;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+
+
+
+
+.preguntas{
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-areas:"titulop titulop "
+                        "pregimagen pregtexto";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto ;
+    justify-items: center;
+    h1{    
+        grid-area: titulop;
+    }
+    img{    
+        width: 400px;
+        height: 500px;
+        padding: 0px;
+    }
+}
+
+.preguntasTexto{   
+    grid-area: pregtexto;
+    display: flex;
+    flex-direction: column; 
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 10px;
+    p{
+        padding-bottom: 10px;
+        padding-left: 30px;
+    }
+    h5{
+        font-weight: bold;
+        font-style: normal;
+        font-size: 25px;
+    }
+}
+
+.preguntasImagen{
+    grid-area: pregimagen;
+}
+
+
+
+.cuidadosYMateriales {
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto ;
+    justify-items: center;
+    grid-template-areas:"tituloc tituloc tituloc"
+                        "imgcu textu textu"
+                        "textd textd imgcd";
+        h1{
+        grid-area: tituloc;
+    }
+    img{
+        width: 350px;
+        height: 250px;
+        object-fit:cover;
+        padding: 15px;
+    }
+    h3{
+        padding-bottom: 10px;
+    }
+}
+    
+.imagenMateriales{
+    grid-area: imgcu;
+}
+.textoMateriales{
+    grid-area: textu;
+    p {
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        padding-bottom: 10px;
+        font-style: italic;
+    }
+}
+.imagenCuidados{
+    grid-area: imgcd;
+}
+.textoCuidados{
+    grid-area: textd;
+    text-align: right;
+    p {
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+}
+
+.unProducto img{
+    width: 300px;
+    height: 400px;
+    object-fit:cover;
+    border-radius: 1rem;
+    box-shadow: $boxshadow;
+    opacity: 70%;
+}

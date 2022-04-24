@@ -1,0 +1,236 @@
+
+.grid {
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    grid-template-areas: "slide"
+                         "nos"
+                         "nos"
+                         "pro"
+                         "pro"
+                         "pro"
+                         "conta"
+                         "conta";
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    justify-content: center;
+}
+  
+.slide {
+    grid-area: slide;
+    margin-top: 50px;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    img{
+    
+        width: 300px;
+        height: 300px;
+        object-fit:cover;
+    }
+
+}
+
+.nosotros {
+    grid-area: nos;
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $rosita;
+    border-radius: 100px;
+    h2{
+        grid-area: titulon;
+        display: flex ;
+        justify-content: center;
+    }
+}
+.nosImagen{
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
+    align-self: center;
+    border-radius: 5px;
+
+}
+.nosTexto{
+    display: flex;
+    flex-direction: column;
+	padding: 10px;
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.pro {
+    grid-area: pro ;
+    padding-top: 40px;
+}
+
+.productosTitulo{
+    display: flex;
+    justify-content: center;
+}
+.ProductosBotonTodos{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    h4 a{
+        display: flex;
+        justify-content: center;
+        color: $beige;
+        background-color: $rosita; 
+        border-width: 2px;
+        border-color: $rosa;
+        border-radius: 1rem;
+        padding: 10px;
+    } 
+    a:hover {
+        color: $verde ;
+        background-color: $beige; 
+        border-style: solid;
+        border-width: 2px;
+        border-color: $rosa;
+        border-radius: 1rem;
+        padding: 10px;
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+}
+
+
+.productosAnillos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: ani;
+}
+.productosAros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: aro;
+}
+.productosVelas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    grid-area: vel;
+}
+
+.productos{
+    display: grid;
+    grid-template-areas: "aro"
+                        "ani"
+                        "vel";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    a{
+        padding: 10px;
+        text-transform:uppercase;
+        font-weight: 500;
+        &:hover{
+            padding: 10px;
+        text-decoration: overline;
+        animation-name: animacion;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        
+        }
+    }
+    img{
+        width: 250px;
+        height: 300px;
+        object-fit:cover;
+        border-radius: 1rem;
+        box-shadow: $boxshadow;
+        opacity: 70%;
+        &:hover{
+            opacity: 100%;
+            animation-name: producto;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+    
+    }
+    
+}
+
+
+
+
+
+.conta{
+    grid-area: conta;
+    padding-top: 40px;
+}
+
+.contactoTitulo{
+    display: flex;
+    justify-content: center;
+}
+
+.contacto{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactoTexto{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    ul{
+        list-style: none;
+        margin-top: 10px;
+        img{
+            width: 25px;
+        }
+    }
+}
+
+.contactoFormulario textarea{
+    height: 100px;
+    width: 280px;
+    resize: none;
+}
+.contactoFormularioPartes{
+    width: 140px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+.botonEnviar{
+    color: $beige ;
+    background-color: $rosa; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: $rosa;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor:pointer;
+    &:hover{
+        color: $verde ;
+        background-color: $beige; 
+        border-style: solid;
+        border-width: 2px;
+        border-color: $rosa;
+        border-radius: 1rem;
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+    
+    
+}

@@ -1,0 +1,82 @@
+
+header{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "nav nav nav";
+    background-color: $verde;
+    height: 80px;
+    z-index: 3; 
+    align-items: center;
+}
+
+nav{
+    grid-area: nav;
+    z-index: 3;
+}
+
+.logo{
+    grid-area: logo;
+    justify-self: center;
+    img{
+        width: 140px;
+    }
+}
+
+.loginYCart  {
+    grid-area: cart;
+    justify-self: end;
+    img {
+        width: 30px;
+        margin-left: 5px;
+    }
+
+}
+.menu{
+    width: 100%;
+    font-size: 1rem;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px;
+	background-color: $verde;
+    justify-items: center;
+    color: $beige;
+    ul {
+        list-style: none;
+        background-color: $verde;
+        ul {
+            position: absolute;
+            display: none;
+            background-color: $verde;
+            text-align: left;
+            li {
+                display: block;
+            }
+            
+        }
+    }
+    li {
+        display: inline;
+        position:relative;
+        text-align: left;
+        a{
+            text-decoration: none;
+            display: inline-block;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: $beige;
+            text-align: left;
+            text-transform:uppercase;
+            font-weight: 600;
+            &:hover{
+                color: $rosa ;
+                text-decoration: overline;
+                animation-name: animacion;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                background-color: $verde;
+            
+            }
+        }
+     }
+}

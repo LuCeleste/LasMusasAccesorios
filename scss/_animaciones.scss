@@ -1,0 +1,30 @@
+
+
+@keyframes animacion {
+    from {text-decoration-color: $transparente;}
+    to {text-decoration-color: $rosa;}
+    
+}
+
+@keyframes boton {
+    from {border-color: $transparente;}
+    to {border-color: $rosa;}
+    from{background-color: $rosa;}
+    to{background-color: $beige;}
+    from{color:$beige}
+    to{color: $verde;}
+
+}
+
+
+
+@keyframes producto{
+    from{opacity: 70%;}
+    to{opacity: 100%;}
+
+}
+
+
+
+
+
