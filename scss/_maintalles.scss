@@ -1,9 +1,9 @@
 
 .talles {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding-top:map-get($margenmobile, top);
+    margin-right: map-get($margenmobile, right);
+    margin-left: map-get($margenmobile, left);
+    margin-bottom: map-get($margenmobile, bottom);
     display: grid;
     grid-template-areas: "titulo"
                         "tallesTexto"
@@ -21,13 +21,12 @@
         grid-area: tallesImagen;
         height: 300px;
         width: 250px;
-        padding-top: 10px;
+        margin-top: 20px;
     }
     p{
-        width: 300px;
         text-align: center;
         font-size: 1.2rem;
-        padding: 10px;
+        padding: 1px;
         grid-area: tallesTexto;
     }
     
@@ -36,14 +35,13 @@
 
 
 .tallesTabla{
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
     border-color: $rosa ;
     border-width: 5px ;
     border-style: solid;
     border-radius: 1rem;
     grid-area: tallesTabla;
-    padding-bottom: 0px;
     table {
         caption-side: bottom;
         border-collapse: collapse;

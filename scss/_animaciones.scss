@@ -1,4 +1,4 @@
-
+/*animacion links*/
 
 @keyframes animacion {
     from {text-decoration-color: $transparente;}
@@ -6,6 +6,7 @@
     
 }
 
+/*animacion boton*/
 @keyframes boton {
     from {border-color: $transparente;}
     to {border-color: $rosa;}
@@ -16,7 +17,7 @@
 
 }
 
-
+/*animacion producto*/
 
 @keyframes producto{
     from{opacity: 70%;}

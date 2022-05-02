@@ -1,8 +1,6 @@
 
 .grid {
     margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
     display: grid;
     grid-template-areas: "slide"
                          "nos"
@@ -19,12 +17,11 @@
   
 .slide {
     grid-area: slide;
-    margin-top: 50px;
-    justify-self: center;
+    margin-top: 40px;
     width: 300px;
     height: 300px;
+    justify-self: center;
     img{
-    
         width: 300px;
         height: 300px;
         object-fit:cover;
@@ -48,8 +45,8 @@
     }
 }
 .nosImagen{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     object-fit:cover;
     align-self: center;
     border-radius: 5px;
@@ -61,6 +58,7 @@
 	padding: 10px;
     font-size: 1rem;
     flex-wrap: wrap;
+    text-align: justify;
 }
 
 
@@ -78,23 +76,10 @@
     justify-content: center;
     padding-top: 20px;
     h4 a{
-        display: flex;
-        justify-content: center;
-        color: $beige;
-        background-color: $rosita; 
-        border-width: 2px;
-        border-color: $rosa;
-        border-radius: 1rem;
-        padding: 10px;
+        @include boton($beige, $rosa, $rosa);
     } 
     a:hover {
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-radius: 1rem;
-        padding: 10px;
+        @include boton($verde, $beige, $rosa);
         animation-name: boton;
         animation-duration: 2s;
         animation-timing-function: ease-in;
@@ -107,23 +92,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
     grid-area: ani;
 }
 .productosAros{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
+    @extend .productosAnillos;
     grid-area: aro;
 }
 .productosVelas{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
+    @extend .productosAnillos;
     grid-area: vel;
 }
 
@@ -134,17 +110,13 @@
                         "vel";
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    a{
+    a{        
+        @include a($verde);
+        font-size: $tamanoh4;
         padding: 10px;
-        text-transform:uppercase;
-        font-weight: 500;
         &:hover{
-            padding: 10px;
-        text-decoration: overline;
-        animation-name: animacion;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        
+        @include ahover($rosa);
+        padding: 10px;
         }
     }
     img{
@@ -194,14 +166,14 @@
         list-style: none;
         margin-top: 10px;
         img{
-            width: 25px;
+            width: 20px;
         }
     }
 }
 
 .contactoFormulario textarea{
     height: 100px;
-    width: 280px;
+    width: 290px;
     resize: none;
 }
 .contactoFormularioPartes{
@@ -211,22 +183,9 @@
     margin-bottom: 5px;
 }
 .botonEnviar{
-    color: $beige ;
-    background-color: $rosa; 
-    border-style: solid;
-    border-width: 2px;
-    border-color: $rosa;
-    border-radius: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor:pointer;
+    @include boton($beige, $rosa, $rosa);
     &:hover{
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-radius: 1rem;
+        @include boton($verde, $beige, $rosa);
         animation-name: boton;
         animation-duration: 2s;
         animation-timing-function: ease-in;

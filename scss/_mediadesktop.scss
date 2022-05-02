@@ -1,6 +1,28 @@
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: $tamanoh1 + 1;
+    font-family: $font-titulos;
+}
+        
+h2{
+    font-size: $tamanoh1 + 1 ;
+    font-family: $font-titulos;
+}
+h3 {
+    font-size: $tamanoh1 ;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+h4{
+    font-size: $tamanoh3 ;
+}
+
+/*header*/
 header{ 
-    grid-template-columns: auto auto auto;
-    grid-template-areas: "nav nav nav";
     background-color: $verde;
     position: sticky;
     top: 0;
@@ -8,13 +30,13 @@ header{
     z-index: 3;
 }
 nav{
-    grid-area: nav;
     z-index: 3;
 }
+/*footer*/
 footer{ 
     display: grid;
     grid-template-columns: auto auto auto;
-    margin: 30px;
+    margin: $margenfooter;
     background-color: $beige;
     grid-template-areas: "news masInfo datos";
 }
@@ -46,58 +68,14 @@ footer{
     padding-bottom: 8px;
     width: 150px;
 }
-.enviar{
-    color: $beige ;
-    background-color: $rosa; 
-    border-style: solid;
-    border-width: 2px;
-    border-color: $rosa;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor:pointer;
-    &:hover{
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        animation-name: boton;
-        animation-duration: 2s;
-        animation-timing-function: ease-in;
-    }
-    
-}
-        
 
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 3rem;
-    font-family: $font-titulos;
-}
         
-h2{
-    font-size: 3rem;
-    font-family: $font-titulos;
-}
-h3 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-h4{
-    font-size: 1.5rem ;
-}
+/*main*/
 .grid {
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top:map-get($margendesktop, top);
+    margin-right: map-get($margendesktop, right);
+    margin-left: map-get($margendesktop, left);
+    margin-bottom: map-get($margendesktop, bottom);
     display: grid;
     grid-template-areas:". slide ."
                         "nos nos nos"
@@ -109,8 +87,8 @@ h4{
 .slide {
     grid-area: slide;
     margin-top: 20px;
-    justify-self: center;
     padding-bottom: 20px;
+    justify-self: center;
     width: 1000px;
     height: 700px;
     img{
@@ -143,7 +121,7 @@ h4{
 .nosotros {
     grid-area: nos;
     margin-top: 80px;
-    padding: 110px;
+    padding: 80px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
@@ -161,7 +139,7 @@ h4{
 
 .pro{
     grid-area: pro;
-    padding-top: 90px;
+    padding-top: 80px;
 }
 
 .productosAnillos{
@@ -169,7 +147,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1rem;
     grid-area: ani;
 }
 .productosAros{
@@ -177,7 +155,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1rem;
     grid-area: aro;
 }
 .productosVelas{
@@ -185,7 +163,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1rem;
     grid-area: vel;
 }
 .productos{
@@ -203,7 +181,7 @@ h4{
 
 .conta{
     grid-area: conta;
-    padding-top: 90px;
+    padding-top: 80px;
 }
 .contactoTitulo{
     display: flex;
@@ -240,34 +218,21 @@ h4{
     margin-bottom: 5px;
 }
 .botonEnviar{
-    color: $beige ;
-    background-color: $rosa; 
-    border-style: solid;
-    border-width: 2px;
-    border-color: $rosa;
-    border-radius: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor:pointer;
+    @include boton($beige, $rosa, $rosa);
     &:hover{
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-radius: 1rem;
+        @include boton($verde, $beige, $rosa);
         animation-name: boton;
         animation-duration: 2s;
         animation-timing-function: ease-in;
     }
 }
 
-
+/*talles*/
 .talles {
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top:map-get($margendesktop, top);
+    margin-right: map-get($margendesktop, right);
+    margin-left: map-get($margendesktop, left);
+    margin-bottom: map-get($margendesktop, bottom);
     display: grid;
     grid-template-areas:". titulo ."
                         "tallesImagen tallesTexto tallesTabla";
@@ -290,7 +255,7 @@ h4{
     grid-area: tallesImagen;
     img{
         width: 300px;
-        height: 420px;
+        height: 400px;
         object-fit:cover;
     }
 }
@@ -307,7 +272,7 @@ h4{
         caption-side: bottom;
         border-collapse: collapse;
         height: 100%;
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 }
 
@@ -316,12 +281,12 @@ h4{
 
 
 
-
+/*preguntas*/
 .preguntas{
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top:map-get($margendesktop, top);
+    margin-right: map-get($margendesktop, right);
+    margin-left: map-get($margendesktop, left);
+    margin-bottom: map-get($margendesktop, bottom);
     display: grid;
     grid-template-areas:"titulop titulop "
                         "pregimagen pregtexto";
@@ -334,7 +299,7 @@ h4{
     img{    
         width: 400px;
         height: 500px;
-        padding: 0px;
+        padding: 0;
     }
 }
 
@@ -342,17 +307,14 @@ h4{
     grid-area: pregtexto;
     display: flex;
     flex-direction: column; 
-    font-style: italic;
-    font-size: 20px;
-    padding-left: 10px;
     p{
-        padding-bottom: 10px;
-        padding-left: 30px;
+        font-style: italic;
+        font-size: 1.2rem;
+        width: 500px;
     }
     h5{
-        font-weight: bold;
-        font-style: normal;
-        font-size: 25px;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
 }
 
@@ -361,12 +323,12 @@ h4{
 }
 
 
-
+/*cuidados*/
 .cuidadosYMateriales {
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top:map-get($margendesktop, top);
+    margin-right: map-get($margendesktop, right);
+    margin-left: map-get($margendesktop, left);
+    margin-bottom: map-get($margendesktop, bottom);
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto ;
@@ -376,15 +338,16 @@ h4{
                         "textd textd imgcd";
         h1{
         grid-area: tituloc;
+        padding-bottom: 15px;
     }
     img{
-        width: 350px;
-        height: 250px;
+        width: 450px;
+        height: 380px;
         object-fit:cover;
         padding: 15px;
     }
     h3{
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
 }
     
@@ -393,34 +356,37 @@ h4{
 }
 .textoMateriales{
     grid-area: textu;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    font-size: $tamanoh3;
+
     p {
-        display: flex;
-        flex-direction: column;
-        font-size: 22px;
-        padding-bottom: 10px;
         font-style: italic;
+        padding-bottom: 5px;
     }
 }
 .imagenCuidados{
     grid-area: imgcd;
 }
 .textoCuidados{
-    grid-area: textd;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    font-size: $tamanoh3;
     text-align: right;
+    margin-top: 20px;
+    grid-area: textd;
     p {
         font-style: italic;
-        display: flex;
-        flex-direction: column;
-        font-size: 22px;
-        padding-bottom: 10px;
     }
 }
-
-.unProducto img{
+/*productos*/
+.unProducto {
+    margin: 10px;
+    img{
     width: 300px;
     height: 400px;
-    object-fit:cover;
-    border-radius: 1rem;
-    box-shadow: $boxshadow;
-    opacity: 70%;
 }
+}
+

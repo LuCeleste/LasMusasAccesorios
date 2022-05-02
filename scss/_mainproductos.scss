@@ -1,12 +1,11 @@
 
 .unProducto{
-    text-decoration: underline;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;  
-    padding: 10px;
     text-transform: uppercase;
+
     img{
         width: 250px;
         height: 300px;
@@ -22,30 +21,32 @@
         }
     
     }
+    a{
+    @include a($verde);
+    padding-top: 10px;
+    }
     a:hover{
-        text-decoration: overline;
-        animation-name: animacion;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
+    @include ahover($rosa);
     }
     
 }
 
 
 .velasTodo {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-top:map-get($margenmobile, top);
+    margin-right: map-get($margenmobile, right);
+    margin-left: map-get($margenmobile, left);
+    margin-bottom: map-get($margenmobile, bottom);
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
     grid-template-areas: "titulov titulov titulov titulov"
                         "velas velas velas velas";
-    justify-items: center;
-    align-items: center;
     h1{
         grid-area: titulov;
+        text-align: center;
     }
 
 }
@@ -60,113 +61,69 @@
 }
 
 .aceroTodo {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    @extend .velasTodo;
     grid-template-areas: "tituloac tituloac tituloac tituloac"
                         "ac ac ac ac";
-    justify-items: center;
-    align-items: center;
     h1{
         grid-area: tituloac;
+        text-align: center;
     }
 
 }
 
 .variosProductosAcero{
+    @extend .variosProductosVelas;
     grid-area: ac;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap: wrap;
 }
 
 
 
 .arosTodo {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    @extend .velasTodo;
     grid-template-areas: "tituloaros tituloaros tituloaros tituloaros"
                         "aros aros aros aros";
-    justify-items: center;
-    align-items: center;
     h1{
         grid-area: tituloaros;
+        text-align: center;
     }
 
 }
 
 .variosProductosAros{
+    @extend .variosProductosVelas;
     grid-area: aros;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap: wrap;
 }
 
 .anillosTodo {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    @extend .velasTodo;
     grid-template-areas: "tituloani tituloani tituloani tituloani"
                         "ani ani ani ani";
-    justify-items: center;
-    align-items: center;
     h1{
         grid-area: tituloani;
+        text-align: center;
     }
 
 }
  
 .variosProductosAnillos{
+    @extend .variosProductosVelas;
     grid-area: ani;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap: wrap;
 }
 
 
 
 .productosTodos {
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+    @extend .velasTodo;
     grid-template-areas: "titulotodo titulotodo titulotodo titulotodo"
                         "todo todo todo todo";
-    justify-items: center;
-    align-items: center;
     h1{
         grid-area: titulotodo;
+        text-align: center;
     }
 
 }
 
 .variosProductosTodos{
+    @extend .variosProductosVelas;
     grid-area: todo;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap: wrap;
 }

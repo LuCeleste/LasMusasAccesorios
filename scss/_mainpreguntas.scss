@@ -1,9 +1,9 @@
 
 .preguntas{
-    padding-top: 110px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-top:map-get($margenmobile, top);
+    margin-right: map-get($margenmobile, right);
+    margin-left: map-get($margenmobile, left);
+    margin-bottom: map-get($margenmobile, bottom);
     display: grid;
     grid-template-areas: "titulop"
                         "pregtexto"
@@ -13,15 +13,12 @@
     justify-items: center;
     h1{    
         grid-area: titulop;
-        align-items: center;
-        justify-content: center;
-        justify-self: center;
         text-align: center;
     }
     img{    
-        width: 280px;
+        width: 300px;
         height: 300px;
-        padding: 0px;
+        padding: 15px;
         object-fit: cover;
     }
 }
@@ -34,19 +31,16 @@
     grid-area: pregtexto;
     display: flex;
     flex-direction: column; 
-    font-style: italic;
     font-size: 1rem;
-    padding-left: 10px;
     p{
-        padding-bottom: 10px;
-        padding-left: 10px;
+        font-style: italic;
     }
     a{
         text-decoration: underline;
+        font-weight: 600;
     }
     h5{
         font-weight: 700;
-        font-style: normal;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }

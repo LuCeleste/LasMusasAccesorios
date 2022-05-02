@@ -2,45 +2,46 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    font-size: 2.5rem;
+    font-size: $tamanoh1 + 0.5 ;
     font-family: $font-titulos;
 }
         
 h2{
-    font-size: 2.5rem;
+    font-size: $tamanoh1 + 0.5 ;
     font-family: $font-titulos;
 }
 h3 {
-    font-size: 1.6rem;
+    font-size: $tamanoh1;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
 }
 h4{
-    font-size: 1.3rem ;
+    font-size: $tamanoh3 ;
 }
-
+/*header*/
 header{ 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    grid-template-areas: "nav nav nav";
     background-color: $verde;
-    height: 80px;  
+    height: 60px;  
     z-index: 3; 
 }
 nav{
-    grid-area: nav;
     z-index: 3;
 }
-
+/*footer*/
 footer{ 
     display: grid;
     grid-template-columns: auto auto ;
     grid-template-rows: auto auto;
-    margin: 30px;
+    margin: $margenfooter;
     background-color: $beige;
     grid-template-areas: "news news" 
                         "masInfo datos";
+}
+
+.newsletterFormDos{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 150px;
 }
 
 .newsletterForm{
@@ -52,13 +53,8 @@ footer{
     width: 150px;
 }
         
-.newsletterFormDos{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 150px;
-}
 
-
+/*main*/
 .grid {
     margin-bottom: 20px;
     margin-left: 10px;
@@ -78,7 +74,7 @@ footer{
     align-self: center;
 }
 .slide {
-    margin-top: 50px;
+    margin-top: 40px;
     justify-self: center;
     width: 500px;
     height: 350px;
@@ -158,8 +154,8 @@ footer{
     grid-template-rows: auto ;
     grid-template-columns: auto auto auto;
     img{
-        width: 180px;
-        height: 250px;
+        width: 150px;
+        height: 200px;
     }
 }
 
@@ -199,22 +195,9 @@ footer{
     margin-bottom: 5px;
 }
 .botonEnviar{
-    color: $beige ;
-    background-color: $rosa; 
-    border-style: solid;
-    border-width: 2px;
-    border-color: $rosa;
-    border-radius: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor:pointer;
+    @include boton($beige, $rosa, $rosa);
     &:hover{
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-radius: 1rem;
+        @include boton($verde, $beige, $rosa);
         animation-name: boton;
         animation-duration: 2s;
         animation-timing-function: ease-in;
@@ -223,17 +206,13 @@ footer{
 }
 
 
-
-
-
-
-
+/*talles*/
 
 .talles {
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding-top:map-get($margentablet, top);
+    margin-right: map-get($margentablet, right);
+    margin-left: map-get($margentablet, left);
+    margin-bottom: map-get($margentablet, bottom);
     display: grid;
     grid-template-areas:"titulo titulo"
                         "tallesTexto tallesTexto"
@@ -246,7 +225,7 @@ footer{
         height: 350px;
         object-fit:cover;
         grid-area: tallesImagen;
-        padding-top: 0px;
+        padding-top: 0;
         padding-right: 10px;
     }
     p{
@@ -280,12 +259,12 @@ table {
 }
 
 
-
+/*preguntas*/
 .preguntas{
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-top:map-get($margentablet, top);
+    margin-right: map-get($margentablet, right);
+    margin-left: map-get($margentablet, left);
+    margin-bottom: map-get($margentablet, bottom);
     display: grid;
     grid-template-areas:"titulop titulop "
                         "pregtexto pregtexto"
@@ -299,24 +278,20 @@ table {
     img{    
         width: 350px;
         height: 400px;
-        padding: 0px;
+        padding: 15px;
         justify-content: center;
     }
 }
 
 .preguntasTexto{   
     grid-area: pregtexto;
-    font-style: italic;
-    font-size: 20px;
-    padding-left: 10px;
     p{
-        padding-bottom: 10px;
-        padding-left: 30px;
+        font-style: italic;
+        font-size: 1.2rem;
     }
     h5{
-        font-weight: bold;
-        font-style: normal;
-        font-size: 25px;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
 }
 
@@ -326,12 +301,12 @@ table {
 
 
 
-
+/*cauidados*/
 .cuidadosYMateriales {
-    padding-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-top:map-get($margentablet, top);
+    margin-right: map-get($margentablet, right);
+    margin-left: map-get($margentablet, left);
+    margin-bottom: map-get($margentablet, bottom);
     display: grid;
     grid-template-columns: auto auto ;
     grid-template-rows: auto auto auto ;
@@ -345,12 +320,12 @@ table {
     }
     img{
         width: 250px;
-        height: 300px;
+        height: 350px;
         object-fit:cover;
         padding: 5px;
     }
     h3{
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
 }
 
@@ -359,11 +334,10 @@ table {
 }
 .textoMateriales{
     grid-area: textu;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
     p {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.1rem;
-        padding-bottom: 2px;
         font-style: italic;
     }
 }
@@ -373,17 +347,19 @@ table {
 .textoCuidados{
     grid-area: textd;
     text-align: right;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    padding-bottom: 1px;
     p {
         font-style: italic;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.1rem;
-        padding-bottom: 2px;
+
     }
     
 }
     
-
+/*productos*/
 .unProducto img{
     width: 250px;
     height: 300px;

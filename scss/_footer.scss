@@ -4,7 +4,7 @@ footer{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    margin: 10px;
+    margin: $margenfooter / 3 ;
     background-color: $beige;
     grid-template-areas: "news"
                         "masInfo"
@@ -35,20 +35,7 @@ footer{
 
 
 footer a:hover{
-    text-decoration: overline;
-    animation-name: animacion;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-
-
-.newsletterForm{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-width: 0.5;
-    width: 90px
+    @include ahover($rosa);
 }
 
 .newsletterFormDos{
@@ -57,26 +44,17 @@ footer a:hover{
     width: 90px;
    
 }
+.newsletterForm{
+    @extend .newsletterFormDos;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-width: 0.5;
+}
+
 .enviar {
-    color: $beige ;
-    background-color: $rosa; 
-    border-style: solid;
-    border-width: 2px;
-    border-color: $rosa;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor:pointer;
-    width: 75px;
+    @include botondos ($beige, $rosa, $rosa);
     &:hover {
-        color: $verde ;
-        background-color: $beige; 
-        border-style: solid;
-        border-width: 2px;
-        border-color: $rosa;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        @include botondos ($verde, $beige, $rosa);        
         animation-name: boton;
         animation-duration: 2s;
         animation-timing-function: ease-in;
