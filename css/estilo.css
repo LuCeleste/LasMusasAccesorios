@@ -1203,6 +1203,66 @@ footer a:hover {
   background-color: #c7746796;
 }
 
+.errorImagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+img {
+  width: 300px;
+}
+
+.error {
+  padding-top: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.errorTexto {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.errorTexto p {
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  border-radius: 2rem;
+  border-color: #c7746796;
+}
+
+.errorTexto a {
+  font-style: italic;
+  color: #c77467;
+}
+
+.errorTexto a:hover {
+  color: #c7746796;
+}
+
+.errorTexto h1 {
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   h1 {
     display: -webkit-box;
@@ -2217,5 +2277,61 @@ footer a:hover {
   .unProducto img {
     width: 300px;
     height: 400px;
+  }
+  /*404*/
+  .errorImagen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  img {
+    width: 450px;
+  }
+  .error {
+    padding-top: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .errorTexto {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .errorTexto p {
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+    border-radius: 2rem;
+    border-color: #c7746796;
+  }
+  .errorTexto a {
+    font-style: italic;
+    color: #c77467;
+  }
+  .errorTexto a:hover {
+    color: #c7746796;
+  }
+  .errorTexto h1 {
+    text-align: center;
   }
 }

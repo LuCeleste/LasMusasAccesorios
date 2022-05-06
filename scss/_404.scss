@@ -1,0 +1,38 @@
+.errorImagen {
+    display: flex;
+    justify-content: center;
+    }
+img{
+    width: 300px;
+}
+.error{
+    padding-top:map-get($margenmobile, top);
+    margin-right: map-get($margenmobile, right);
+    margin-left: map-get($margenmobile, left);
+    margin-bottom: map-get($margenmobile, bottom);
+    display: flex;
+    flex-direction: column-reverse;
+}
+.errorTexto{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    p{
+        border-style: solid;
+        border-width: 2px;
+        padding: 20px;
+        border-radius: 2rem;
+        border-color: $rosita;
+    }
+    a{
+        font-style: italic;
+        color: $rosa;
+        &:hover{
+            color: $rosita;
+        }
+    }
+    h1{
+        text-align: center;
+    }
+}
