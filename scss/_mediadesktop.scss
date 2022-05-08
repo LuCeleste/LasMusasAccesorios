@@ -39,6 +39,9 @@ footer{
     margin: $margenfooter;
     background-color: $beige;
     grid-template-areas: "news masInfo datos";
+    h4{
+        font-size: $tamanoh4;
+    }
 }
 
 .news{

@@ -36,6 +36,9 @@ footer{
     background-color: $beige;
     grid-template-areas: "news news" 
                         "masInfo datos";
+    h4{
+        font-size: $tamanoh4;
+    }
 }
 
 .newsletterFormDos{
