@@ -29,6 +29,8 @@
 
 }
 
+
+
 .nosotros {
     grid-area: nos;
     margin-top: 80px;
@@ -46,7 +48,7 @@
 }
 .nosImagen{
     width: 200px;
-    height: 200px;
+    height: 150px;
     object-fit:cover;
     align-self: center;
     border-radius: 5px;
@@ -56,9 +58,9 @@
     display: flex;
     flex-direction: column;
 	padding: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     flex-wrap: wrap;
-    text-align: justify;
+    text-align: left;
 }
 
 
@@ -175,12 +177,24 @@
     height: 100px;
     width: 290px;
     resize: none;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-color: $rosa;
 }
+
 .contactoFormularioPartes{
     width: 140px;
+    border-color: $rosa;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 5px;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.contactoFormularioPartesDos{
+@extend .contactoFormularioPartes;
 }
 .botonEnviar{
     @include boton($beige, $rosa, $rosa);

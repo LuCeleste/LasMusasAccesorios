@@ -80,6 +80,10 @@
   }
 }
 
+/*map-get*/
+/*mixin boton*/
+/*mixin boton mitad*/
+/*mixin links*/
 /*modificaciones de bootstrap*/
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   padding-left: 0;
@@ -189,6 +193,7 @@
 .accordion-button:focus {
   -webkit-box-shadow: 0 0 0 0.25rem #c77467;
           box-shadow: 0 0 0 0.25rem #c77467;
+  z-index: 1;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -400,7 +405,7 @@ nav {
 
 .nosImagen {
   width: 200px;
-  height: 200px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: center;
@@ -418,10 +423,10 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-align: justify;
+  text-align: left;
 }
 
 .pro {
@@ -618,13 +623,21 @@ nav {
   height: 100px;
   width: 290px;
   resize: none;
+  border-width: 0.1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-color: #c77467;
 }
 
-.contactoFormularioPartes {
+.contactoFormularioPartes, .contactoFormularioPartesDos {
   width: 140px;
+  border-color: #c77467;
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom: 5px;
+  border-width: 0.1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .botonEnviar {
@@ -716,12 +729,13 @@ footer a:hover {
   padding-top: 8px;
   padding-bottom: 8px;
   width: 90px;
+  border-width: 0.1rem;
+  border-color: #c77467;
 }
 
 .newsletterForm {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  border-width: 0.5;
 }
 
 .enviar {
@@ -861,12 +875,6 @@ footer a:hover {
   padding: 5px;
 }
 
-.todoLogin img {
-  width: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .login {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -881,6 +889,9 @@ footer a:hover {
   padding-top: 8px;
   padding-bottom: 8px;
   width: 16rem;
+  border-width: 0.1rem;
+  border-radius: 0.5rem;
+  border-color: #c77467;
 }
 
 .loginEnItalic {
@@ -1210,7 +1221,7 @@ footer a:hover {
           justify-content: center;
 }
 
-img {
+.errorImagen img {
   width: 300px;
 }
 
@@ -1354,13 +1365,14 @@ img {
     height: 350px;
   }
   .nosImagen {
-    width: 200px;
-    height: 300px;
+    width: 350px;
+    height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: nosimg;
+        justify-self: center;
   }
   .nosTexto {
     display: -webkit-box;
@@ -1375,8 +1387,7 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: auto;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: nostext;
   }
@@ -1389,11 +1400,11 @@ img {
     padding: 30px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: "nostext titulon" "nostext nosimg";
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "titulon " "nostext " "nosimg";
     border-radius: 100px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1401,7 +1412,7 @@ img {
   }
   .nosotros h2 {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
     grid-area: titulon;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1481,6 +1492,42 @@ img {
     width: 150px;
     height: 200px;
   }
+  .ProductosBotonTodos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
+  }
+  .ProductosBotonTodos h4 a {
+    color: #F4ECDC;
+    background-color: #c77467;
+    border-color: #c77467;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .ProductosBotonTodos a:hover {
+    color: #023C24;
+    background-color: #F4ECDC;
+    border-color: #c77467;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-animation-name: boton;
+            animation-name: boton;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
   .contactoTitulo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1520,14 +1567,23 @@ img {
   }
   .contactoFormulario textarea {
     height: 150px;
-    width: 200px;
+    width: 220px;
     resize: none;
+    border-width: 0.1rem;
   }
-  .contactoFormularioPartes {
+  .contactoFormularioPartes, .contactoFormularioPartesDos {
     width: 100px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 5px;
+    border-width: 0.1rem;
+  }
+  .contactoFormularioPartesDos {
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-width: 0.1rem;
   }
   .botonEnviar {
     color: #F4ECDC;
@@ -1627,6 +1683,11 @@ img {
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
     justify-items: center;
+  }
+  .preguntas p {
+    font-style: italic;
+    font-size: 1.1rem;
+    width: 400px;
   }
   .preguntas h1 {
     -ms-grid-row: 1;
@@ -2002,6 +2063,42 @@ img {
     width: 300px;
     height: 350px;
   }
+  .ProductosBotonTodos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
+  }
+  .ProductosBotonTodos h4 a {
+    color: #F4ECDC;
+    background-color: #c77467;
+    border-color: #c77467;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .ProductosBotonTodos a:hover {
+    color: #023C24;
+    background-color: #F4ECDC;
+    border-color: #c77467;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-animation-name: boton;
+            animation-name: boton;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
   .conta {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
@@ -2052,12 +2149,27 @@ img {
     height: 200px;
     width: 400px;
     resize: none;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
-  .contactoFormularioPartes {
-    width: 198px;
+  .contactoFormularioPartes, .contactoFormularioPartesDos {
+    width: 195px;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 5px;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .contactoFormularioPartesDos {
+    width: 195px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   .botonEnviar {
     color: #F4ECDC;
@@ -2291,7 +2403,7 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  img {
+  .errorImagen img {
     width: 450px;
   }
   .error {

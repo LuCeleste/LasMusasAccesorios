@@ -179,7 +179,21 @@ footer{
         height: 350px;
     }
 }
-
+.ProductosBotonTodos{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    h4 a{
+        @include boton($beige, $rosa, $rosa);
+        font-size: $tamanoh3;
+    } 
+    a:hover {
+        @include boton($verde, $beige, $rosa);
+        animation-name: boton;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+}
 
 
 .conta{
@@ -213,12 +227,27 @@ footer{
     height: 200px;
     width: 400px;
     resize: none;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .contactoFormularioPartes{
-    width: 198px;
+    width: 195px;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-bottom: 5px;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.contactoFormularioPartesDos{
+    width: 195px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    border-width: 0.1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .botonEnviar{
     @include boton($beige, $rosa, $rosa);
@@ -339,7 +368,7 @@ footer{
     grid-template-areas:"tituloc tituloc tituloc"
                         "imgcu textu textu"
                         "textd textd imgcd";
-        h1{
+    h1{
         grid-area: tituloc;
         padding-bottom: 15px;
     }
@@ -398,10 +427,11 @@ footer{
 .errorImagen {
     display: flex;
     justify-content: center;
+    img{
+        width: 450px;
     }
-img{
-    width: 450px;
-}
+    }
+
 .error{
     padding-top:map-get($margendesktop, top);
     margin-right: map-get($margendesktop, right);

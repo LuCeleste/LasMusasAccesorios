@@ -1,4 +1,4 @@
-
+/*map-get*/
 $margenmobile: (
     top:40px,
     right:10px,
@@ -21,7 +21,7 @@ $margendesktop: (
 
 );
 
-
+/*mixin boton*/
 @mixin boton($color, $bgcolor, $borcolor) {
     color: $color;
     background-color: $bgcolor; 
@@ -33,6 +33,7 @@ $margendesktop: (
     cursor:pointer;
 }
 
+/*mixin boton mitad*/
 @mixin botondos ($color, $bgcolor, $borcolor){
     color: $color ;
     background-color: $bgcolor; 
@@ -46,6 +47,7 @@ $margendesktop: (
     cursor:pointer;
     width: 75px;
 }
+/*mixin links*/
 @mixin a($color,) {
     text-transform:uppercase;
     text-decoration: none;

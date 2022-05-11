@@ -41,13 +41,13 @@ footer a:hover{
     padding-top: 8px;
     padding-bottom: 8px;
     width: 90px;
-   
+    border-width: 0.1rem;
+    border-color: $rosa
 }
 .newsletterForm{
     @extend .newsletterFormDos;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    border-width: 0.5;
 }
 
 .enviar {
